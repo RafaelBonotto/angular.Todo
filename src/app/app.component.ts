@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo';
+  
+  public todos: any[] = []; // any -> tipo generico, aceita qualquer tipo
+
+  constructor() {
+    this.todos.push("Tarefa 1");
+    this.todos.push("Tarefa 2");
+    this.todos.push("Tarefa 3");
+    this.todos.push(2022);
+    this.todos.push({ message: "teste" });
+    this.todos.push(new Date());
+  }
 }
