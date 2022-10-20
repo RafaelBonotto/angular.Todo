@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   
   public todos: any[] = []; // any -> tipo generico, aceita qualquer tipo
+  public titulo: String = "Minhas tarefas";
 
   constructor() {
     this.todos.push("Tarefa 1");
@@ -16,5 +17,9 @@ export class AppComponent {
     this.todos.push(2022);
     this.todos.push({ message: "teste" });
     this.todos.push(new Date());
+  }
+
+  alterarTitulo(){
+    this.titulo = "Titulo alterado";
   }
 }

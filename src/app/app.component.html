@@ -1,1 +1,8 @@
-<h1>Meu primeiro componente </h1>
+<h1> {{ titulo }} </h1>
+
+<button (click)="alterarTitulo()">ALterar Título</button>
+
+<ul>
+    <!-- foreach -->
+    <li *ngFor="let todo of todos"> {{todo}} </li> 
+</ul>
