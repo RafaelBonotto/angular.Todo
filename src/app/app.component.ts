@@ -20,4 +20,19 @@ export class AppComponent {
   alterarTitulo(){
     this.titulo = "Titulo alterado";
   }
+
+  remove(todo: Todo){
+    let index = this.todos.indexOf(todo);
+    if(index !== -1){
+      this.todos.splice(index, 1);
+    }
+  }
+
+  markAsDone(){
+
+  }
+
+  markAsUndone(){
+
+  }
 }
