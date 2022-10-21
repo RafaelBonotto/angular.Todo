@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Todo } from 'src/models/todo.model';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  public todos: any[] = []; // any -> tipo generico, aceita qualquer tipo
+  public todos: Todo[] = []; 
   public titulo: String = "Minhas tarefas";
 
   constructor() {
-    this.todos.push("Tarefa 1");
-    this.todos.push("Tarefa 2");
-    this.todos.push("Tarefa 3");
-    this.todos.push(2022);
-    this.todos.push({ message: "teste" });
-    this.todos.push(new Date());
+    this.todos.push(new Todo(1, "Todo 1", false));
+    this.todos.push(new Todo(2, "Todo 2", false));
+    this.todos.push(new Todo(3, "Todo 3", false));
   }
 
   alterarTitulo(){
