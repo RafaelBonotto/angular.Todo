@@ -14,7 +14,7 @@ export class AppComponent {
   constructor() {
     this.todos.push(new Todo(1, "Todo 1", false));
     this.todos.push(new Todo(2, "Todo 2", false));
-    this.todos.push(new Todo(3, "Todo 3", false));
+    this.todos.push(new Todo(3, "Todo 3", true));
   }
 
   alterarTitulo(){
