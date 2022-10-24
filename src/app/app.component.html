@@ -12,10 +12,14 @@
     </li> 
 </ul>
 
-<form>
+<form [formGroup] = "form">
     <fieldset>
         <label>Tarefa: </label>
-        <input type="text">
+        <input 
+            type="text" 
+            placeholder="Título da Tarefa" 
+            maxlength="60" 
+            formControlName="title">
         <button>Salvar</button>
     </fieldset>
 </form>
