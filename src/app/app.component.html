@@ -4,22 +4,19 @@
 
 <ul>
     <!-- foreach -->
-    <li *ngFor="let todo of todos"> 
-        {{todo.id}}. {{todo.title}} | 
-        <button *ngIf="!todo.done" (click)="markAsDone(todo)">CONCLUIR</button> | 
+    <li *ngFor="let todo of todos">
+        {{todo.id}}. {{todo.title}} |
+        <button *ngIf="!todo.done" (click)="markAsDone(todo)">CONCLUIR</button> |
         <button *ngIf="todo.done" (click)="markAsUndone(todo)">REFAZER</button> |
         <button (click)="remove(todo)">REMOVER</button>
-    </li> 
+    </li>
 </ul>
-
-<form [formGroup] = "form">
+<!-- alt + shift + f => identação no código -->
+<form [formGroup]="form">
     <fieldset>
         <label>Tarefa: </label>
-        <input 
-            type="text" 
-            placeholder="Título da Tarefa" 
-            maxlength="60" 
-            formControlName="title">
+        <input type="text" placeholder="Título da Tarefa" maxlength="60" formControlName="title">
+        <small *ngIf="form.controls.title.invalid && !form.controls.title.pristine">Este campo deve conter entre 3 e 60 caracteres</small>
         <button>Salvar</button>
     </fieldset>
 </form>
