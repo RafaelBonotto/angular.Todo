@@ -3,6 +3,7 @@
 <button (click)="alterarTitulo()">ALterar Título</button>
 
 <ul>
+    <p *ngIf="todos.length == 0"><small>NÃO TEM NENHUMA TAREFA HOJE!</small></p>
     <!-- foreach -->
     <li *ngFor="let todo of todos">
         {{todo.id}}. {{todo.title}} |
