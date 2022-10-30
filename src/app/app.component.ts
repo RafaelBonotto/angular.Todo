@@ -28,6 +28,10 @@ export class AppComponent {
     this.todos.push(new Todo(3, "Todo 3", true));
   }
 
+  clear(){
+    this.form.reset();
+  }
+
   add(){
     const title = this.form.controls['title'].value; // captura o titulo da tela
     const id = this.todos.length + 1; // lista de tarefa + 1 (cria um id para tarefa)
