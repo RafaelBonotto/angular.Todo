@@ -23,6 +23,11 @@ export class AppComponent {
       });
   }
 
+  save(){
+    const data = JSON.stringify(this.todos);
+    localStorage.setItem('todos', data);
+  }
+
   clear(){
     this.form.reset();
   }
