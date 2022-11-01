@@ -23,6 +23,11 @@ export class AppComponent {
       });
   }
 
+  load(){
+    const data = localStorage.getItem('todos');
+    this.todos = JSON.parse(data?.toString());
+  }
+
   save(){
     const data = JSON.stringify(this.todos);
     localStorage.setItem('todos', data);
