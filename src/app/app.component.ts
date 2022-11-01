@@ -21,6 +21,7 @@ export class AppComponent {
           Validators.required,
         ])]
       });
+      this.load();
   }
 
   load(){
