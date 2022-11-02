@@ -1,6 +1,4 @@
-<h1 class="title animate__animated animate__bounce"> {{ titulo }} </h1>
-
-<button (click)="alterarTitulo()">ALterar Título</button>
+<h1 class="title animate__animated animate__bounce"> LISTA DE TAREFAS </h1>
 
 <ul class="animated flipInX" *ngIf="mode=='list'">
     <p *ngIf="todos.length == 0"><small>NÃO TEM NENHUMA TAREFA HOJE!</small></p>
@@ -23,3 +21,8 @@
     </fieldset>
 </form>
 </div>
+
+<button class="add-button animated fadeInUp button" (click)="changeMode('add')" *ngIf="mode=='list'">
+    <i class="fas fa-plus-circle"></i>
+    NOVA TAREFA
+  </button>
