@@ -20,7 +20,13 @@
         Este campo deve conter entre 3 e 60 caracteres<br>
     </small> 
     <p class="text-center">
-        <button class="button" [disabled]="form.invalid" (click)="add()">Salvar</button>
+        <button 
+            class="button" 
+            [disabled]="form.invalid" 
+            (click)="add()">
+            <i class="far fa-save"></i>
+            Salvar
+        </button>
     </p>
 </form>
 </div>
