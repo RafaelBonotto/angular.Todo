@@ -10,8 +10,9 @@ import { Todo } from 'src/models/todo.model';
 })
 export class AppComponent {
   
+  public mode: string = 'list';
   public todos: Todo[] = []; 
-  public titulo: String = "Minhas tarefas";
+  public titulo: string = "Minhas tarefas";
   public form: FormGroup;
 
   constructor(private fb: FormBuilder) {
