@@ -13,6 +13,7 @@
     </li>
 </ul>
 <!-- alt + shift + f => identação no código -->
+<div id="modal" *ngIf="mode=='add'" class="animated flipInX">
 <form [formGroup]="form">
     <fieldset>
         <label>Tarefa: </label>
@@ -21,3 +22,4 @@
         <button class="button" [disabled]="form.invalid" (click)="add()">Salvar</button>
     </fieldset>
 </form>
+</div>
