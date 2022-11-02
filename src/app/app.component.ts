@@ -71,4 +71,8 @@ export class AppComponent {
     todo.done = false;
     this.save();
   }
+
+  changeMode(mode: string){
+    this.mode = mode;
+  }
 }
